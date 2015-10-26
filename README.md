@@ -6,4 +6,4 @@ Standards: HTML5, CSS3
 
 Components: jQuery
 
-Softwares: Sublime, Scss, Codekit
+Softwares: Sublime, Scss, Jade, Codekit
