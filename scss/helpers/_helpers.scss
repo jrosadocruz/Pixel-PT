@@ -1,0 +1,22 @@
+// ------------------------------------------------------------
+// Helpers
+
+// ------------------------------------------------------------
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+.animate { transition: all .5s ease-in-out; }
+
+.fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}

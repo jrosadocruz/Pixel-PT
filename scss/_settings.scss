@@ -1,0 +1,74 @@
+// ------------------------------------------------------------
+// Settings
+
+// :: Settings
+// :: Breakpoints
+// :: Colors
+// :: Typesizes/scale
+// ------------------------------------------------------------
+
+
+// ------------------------------------------------------------
+// :: Settings
+// ------------------------------------------------------------
+
+// Better Helvetica: http://css-tricks.com/snippets/css/better-helvetica/
+$font-family        : "HelveticaNeue-Light", "Helvetica Neue Light",
+                      "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+                      sans-serif;
+
+$base-font-size     : 16px;
+$base-margin        : 24px;
+$base-line-height   : 1.5;
+$border-box-sizing  : false;
+
+
+// ------------------------------------------------------------
+// :: Breakpoints
+// ------------------------------------------------------------
+
+// easy going breakpoints.
+// not used for this project, but left it just.
+
+$phone              : 30em;  // first viewport
+$tablet             : 48em;  // up one
+$laptop             : 62em;  // up two
+$desktop            : 75em;  // up three
+
+
+// ------------------------------------------------------------
+// :: Colors
+// ------------------------------------------------------------
+
+// Define your main color palette using whatever naming system you like
+$red    : #FF2D1D;
+$yellow : #FFB900;
+$grey   : #2d2c2a;
+
+
+// Assign colours to variable roles
+// Be descriptive without being specific.
+// This allows for consistency project to project, and easy changing
+
+$body-color             : $grey;
+$color-primary          : $red;
+$color-secondary        : $yellow;
+
+
+
+// ------------------------------------------------------------
+// :: Typesizes/scale
+// ------------------------------------------------------------
+
+// Greek alphabet naming system. Obscure, yet hierarchical.
+// Allows us to avoid naming based on html object.
+// Eg. A h1 can be smaller visually, than a h4.
+$alpha    : 51; // 3.1875rem
+$beta     : 39; // h1
+$gamma    : 31; // h2
+$delta    : 23; // h3
+$epsilon  : 20; // h4
+$zeta     : $base-font-size; // h5
+$eta      : 14; // h6
+$theta    : 13; //
+$iota     : 10; //

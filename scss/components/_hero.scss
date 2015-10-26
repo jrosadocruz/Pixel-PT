@@ -1,0 +1,51 @@
+// ------------------------------------------------------------
+// Hero
+
+// ------------------------------------------------------------
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  p { font-size: 22px; width: 50%; margin: 0 auto; }
+}
+
+.hero__content {
+  position: relative;
+  top: 40%;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  color: white;
+}
+
+.hero__background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero__background--home {
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  background-image: url("../images/home/home-pixel.jpg")
+}
+
+.hero__image {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .5;
+}

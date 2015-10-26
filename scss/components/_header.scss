@@ -1,0 +1,157 @@
+// ------------------------------------------------------------
+// Header
+
+// :: Header
+// :: Nav
+// :: Toggle
+// ------------------------------------------------------------
+
+$nav-bg-color-open: $color-primary;
+$nav-bg-color-closed: white;
+$nav-link-color : white;
+$nav-link-bg-hover: black;
+$nav-link-border-color : $color-secondary;
+
+
+// ------------------------------------------------------------
+// :: Header
+// ------------------------------------------------------------
+
+.header {
+  background: $nav-bg-color-open;
+  box-shadow: 0 -1px 18px rgba(0,0,0,0.1);
+  &.closed{
+    background: $nav-bg-color-closed;
+    .logo__img--1 { opacity: 1; visibility: visible; }
+    .logo__img--2 { opacity: 0; visibility: hidden; }
+    .nav {
+      transform: translate(50px,0px);
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+.logo {
+  float: left;
+  display: block;
+  margin: 10px 20px;
+  position: relative;
+}
+
+.logo__img {
+  transition: visibility 0s, opacity .5s ease-in-out;
+  position: absolute;
+  top:0;
+  left: 0;
+  &--1 { opacity: 0; visibility: hidden; }
+  &--2 { opacity: 1; visibility: visible; }
+}
+
+// ------------------------------------------------------------
+// :: Nav
+// ------------------------------------------------------------
+.nav {
+  float: right;
+  margin-right: 75px;
+}
+
+.nav__list {
+  list-style: none;
+  list-style-image: none;
+}
+
+.nav__list-item { float: left; }
+
+.nav__link {
+  display: block;
+  margin: 0px;
+  padding: 15px 25px;
+  border-width: 5px 0px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba($nav-link-color, 0.65);
+  transition: color 0.5s ease;
+
+  &.active {
+    color: $nav-link-color;
+    border-bottom-color: $nav-link-border-color;
+  }
+  &:hover { color: $nav-link-color; }
+
+}
+
+// ------------------------------------------------------------
+// :: Toggle
+// ------------------------------------------------------------
+.js-nav-toggle {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  outline: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  > * { display: block; }
+  &:hover, &:focus { outline: none; }
+  &:hover {
+    .nav-toggle__lines:before { transform:translateY(2px); }
+    .nav-toggle__lines:after  { transform:translateY(-2px); }
+  }
+  ::-moz-focus-inner { border: 0; }
+}
+
+.nav-toggle__lines {
+  width: 30px;
+  background: $color-primary;
+  position: relative;
+
+  &::before, &::after {
+    display: inline-block;
+    height: 4px;
+    width: 30px;
+    transition: 0.2s;
+    background: $color-primary;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    transform-origin: 50% 50%;
+    transition: top .2s .2s ease, transform .2s ease;
+  }
+
+  &::before { top: 5px; }
+  &::after { top: -10px; }
+}
+
+.js-nav-toggle.closed {
+  .nav-toggle__lines::after,
+  .nav-toggle__lines::before {
+    top: 0;
+    transition: background .5s;
+    transition: top .2s ease, transform .2s .2s ease;
+    background: $nav-link-color;
+    width: 30px;
+  }
+
+  .nav-toggle__lines::before {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+  .nav-toggle__lines::after {
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+
+  &:hover {
+    .nav-toggle__lines::before,
+    .nav-toggle__lines::after {
+      background: #333;
+    }
+  }
+}
