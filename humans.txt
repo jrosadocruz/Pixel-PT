@@ -4,4 +4,4 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: jQuery
-  Software: Sublime, Scss, Codekit
+  Software: Sublime, Scss, Jade, Codekit
